@@ -1,0 +1,14 @@
+{
+    "name": "LaptopDatabase",
+    "version": "1.0.0",
+    "scripts": {
+      "start": "npm run start-backend && npm run start-frontend",
+      "start-frontend": "cd frontend && npm start",
+      "start-backend": "cd backend && node server.js",
+      "build": "cd frontend && npm run build",
+      "deploy": "npm run build && cd backend && npm start"
+    },
+    "dependencies": {
+    }
+  }
+  
