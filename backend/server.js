@@ -44,8 +44,8 @@ server.post('/api/delete_laptop', (req, res) => {
       if (results.length === 0) {
         res.json({ status: false });
       } else {
-        const delete_query = 'DELETE FROM `laptop` WHERE `ID`=?';
-        database.query(delete_query, [laptopId], (deleteErr, deleteResult) => {
+        const delete_query = 'DELETE FROM ?? WHERE `ID`=?';
+        database.query(delete_query, [laptopTable, laptopId], (deleteErr, deleteResult) => {
           if (deleteErr) {
             res.status(500).json({ error: 'Table Deletion Error' });
           } else {

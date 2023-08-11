@@ -90,13 +90,18 @@ function FindLaptopPage() {
                     <div>
                         {laptops.map(laptop => (
                             <Card className='laptop-card' border='white' bg='dark' key='Dark' text='light'>
-                                <Card.Title>Laptop {laptop.Merk}</Card.Title>
-                                <Card.Text>
-                                    <pre style={{ whiteSpace: 'pre-wrap', wordBreak: 'keep-all' }}>
-                                        {laptop.Spesifikasi}
-                                        {laptop.Nota}
-                                    </pre>
-                                </Card.Text>
+                                <Card.Body>
+                                    <Card.Title>Laptop {laptop.Merk}</Card.Title>
+                                    <br/>
+                                    <Card.Text>
+                                        <pre style={{ whiteSpace: 'pre-wrap', wordBreak: 'keep-all' }}>
+                                            {laptop.Spesifikasi}
+                                        </pre>
+                                        <pre style={{ whiteSpace: 'pre-wrap', wordBreak: 'keep-all' }}>
+                                            {laptop.Nota}
+                                        </pre>
+                                    </Card.Text>
+                                </Card.Body>
                             </Card>
                         ))}
                     </div>
